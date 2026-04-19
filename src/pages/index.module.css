@@ -1,0 +1,313 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 4.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(70, 118, 220, 0.08), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(27, 78, 173, 0.06), transparent 24%),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 90%);
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 42rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin: 1.1rem 0 0;
+  color: #0f172a;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.heroSubtitle {
+  margin: 1.15rem 0 0;
+  color: #23406f;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.6;
+}
+
+.heroDescription {
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 0.9rem;
+  padding: 0.9rem 1.3rem;
+  font-weight: 600;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.primaryButton {
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+  color: #f8fbff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.22);
+}
+
+.primaryButton:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.28);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+}
+
+.secondaryButton:hover {
+  color: #081120;
+  transform: translateY(-1px);
+  border-color: rgba(37, 99, 235, 0.22);
+  background: #ffffff;
+}
+
+.heroPanel {
+  position: relative;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 245, 249, 0.96));
+  box-shadow:
+    0 18px 52px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.panelHeader {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.panelDot {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.32);
+}
+
+.panelBody {
+  padding: 1.25rem 1.2rem 1.35rem;
+}
+
+.panelLine {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+}
+
+.panelLabel {
+  color: #64748b;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panelValue {
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+
+.panelDivider {
+  margin: 0.7rem 0 0.9rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.28), transparent);
+}
+
+.panelText {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.mainContent {
+  background: linear-gradient(180deg, #f8fafc 0%, #eef4fb 100%);
+}
+
+[data-theme='dark'] .heroBanner {
+  background:
+    radial-gradient(circle at top left, rgba(42, 110, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 85% 20%, rgba(23, 63, 140, 0.35), transparent 28%),
+    linear-gradient(180deg, #06080d 0%, #09111f 55%, #060a12 100%);
+  border-bottom: 1px solid rgba(111, 168, 255, 0.12);
+}
+
+[data-theme='dark'] .heroBanner::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+[data-theme='dark'] .eyebrow {
+  border: 1px solid rgba(116, 168, 255, 0.2);
+  background: rgba(9, 17, 31, 0.8);
+  color: #8eb8ff;
+}
+
+[data-theme='dark'] .heroTitle {
+  color: #f5f9ff;
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: #c3d5f8;
+}
+
+[data-theme='dark'] .heroDescription {
+  color: rgba(218, 229, 247, 0.78);
+}
+
+[data-theme='dark'] .primaryButton {
+  border: 1px solid rgba(122, 174, 255, 0.28);
+  background: linear-gradient(180deg, #2c6fff 0%, #1f56d9 100%);
+  color: #f7fbff;
+  box-shadow: 0 12px 32px rgba(24, 74, 183, 0.28);
+}
+
+[data-theme='dark'] .primaryButton:hover {
+  box-shadow: 0 16px 38px rgba(24, 74, 183, 0.34);
+}
+
+[data-theme='dark'] .secondaryButton {
+  border: 1px solid rgba(128, 164, 220, 0.2);
+  background: rgba(8, 14, 26, 0.72);
+  color: #d8e6ff;
+}
+
+[data-theme='dark'] .secondaryButton:hover {
+  color: #f5f9ff;
+  border-color: rgba(128, 177, 255, 0.34);
+  background: rgba(12, 22, 38, 0.92);
+}
+
+[data-theme='dark'] .heroPanel {
+  border: 1px solid rgba(111, 168, 255, 0.16);
+  background: linear-gradient(180deg, rgba(8, 14, 24, 0.95), rgba(7, 11, 20, 0.88));
+  box-shadow:
+    0 18px 52px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+[data-theme='dark'] .panelHeader {
+  border-bottom: 1px solid rgba(120, 149, 197, 0.12);
+}
+
+[data-theme='dark'] .panelDot {
+  background: rgba(157, 186, 236, 0.4);
+}
+
+[data-theme='dark'] .panelLabel {
+  color: rgba(158, 181, 222, 0.72);
+}
+
+[data-theme='dark'] .panelValue {
+  color: #eaf2ff;
+}
+
+[data-theme='dark'] .panelDivider {
+  background: linear-gradient(90deg, rgba(106, 157, 255, 0.34), transparent);
+}
+
+[data-theme='dark'] .panelText {
+  color: rgba(214, 225, 245, 0.76);
+}
+
+[data-theme='dark'] .mainContent {
+  background: linear-gradient(180deg, #060a12 0%, #08101c 100%);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .heroContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .heroPanel {
+    max-width: 34rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heroBanner {
+    padding: 4rem 0 3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .panelLine {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
